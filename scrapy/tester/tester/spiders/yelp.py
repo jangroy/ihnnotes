@@ -38,6 +38,9 @@ class Yelp(IndexItemSpider):
     item_attrs = {'name': '.ddc-page-title'}
 
     next_page_url_selector = next_page_url_fn_selector
+    
+    print("next_page_url_selector" + str(next_page_url_selector))
+    print("item_url_selector" + str(item_url_selector))
 
     loader = CustomLoader
 

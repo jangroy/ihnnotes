@@ -12,7 +12,6 @@ import logging
 import csv
 # import pymongo
 
-
 class testerPipeline(object):
     items = []
     items_count = 0
@@ -24,7 +23,7 @@ class testerPipeline(object):
         # self.mongo_uri = settings.get('MONGO_URI')
         # self.mongo_db = settings.get('MONGO_DATABASE')
         # self.spider_frames_controller_full_path = settings.get('SPIDER_FRAMES_CONTROLLER_FULL_PATH')
-        self.client = None
+        # self.client = None
         self.db = None
         self.items_count = 0
 
@@ -61,8 +60,7 @@ class testerPipeline(object):
             return item
 
     def close_spider(self, spider):
-        self.client.close()
-
+        print("close_spider run")
         # write the writing to file logic here (CSV file)
         #
         #

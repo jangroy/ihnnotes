@@ -6,7 +6,6 @@ from scrapy.loader.processors import TakeFirst, MapCompose, Join, Identity, Comp
 from w3lib.html import remove_tags
 import urlparse
 
-
 def get_full_url(src, loader_context):
     return urlparse.urljoin(loader_context.get('url'), src)
 
