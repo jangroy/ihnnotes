@@ -1,0 +1,10 @@
+{
+    "headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", 
+        "Accept-Language": "en", 
+        "Authorization": "Basic OTRjMDMxMGIxMjRiNDhiNTk2ZjBjZGE5MDc1MDYzOTk6", 
+        "Referer": "https://www.yelp.com/search?find_desc=restaurant&find_loc=New+York,+NY,+United+States&start=0", 
+        "User-Agent": "Scrapy/1.5.0 (+https://scrapy.org)"
+    }, 
+    "url": "https://www.yelp.com/search?find_desc=restaurant&find_loc=New+York%2C+NY%2C+United+States&start=10"
+}

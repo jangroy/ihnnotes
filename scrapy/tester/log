@@ -1,0 +1,8 @@
+2018-05-11 10:52:39 [root] WARNING: Opening spider...
+2018-05-11 10:52:51 [scrapy.core.engine] ERROR: Scraper close failure
+Traceback (most recent call last):
+  File "/home/john/.local/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/john/roy/scrapy/tester/tester/pipelines.py", line 60, in close_spider
+    self.client.close()
+AttributeError: 'NoneType' object has no attribute 'close'
