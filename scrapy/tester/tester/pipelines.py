@@ -60,7 +60,6 @@ class testerPipeline(object):
             return item
 
     def close_spider(self, spider):
-        print("close_spider run")
         # write the writing to file logic here (CSV file)
         #
         #

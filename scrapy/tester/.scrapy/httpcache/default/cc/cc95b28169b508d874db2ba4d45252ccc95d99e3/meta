@@ -1,0 +1,1 @@
+{'url': 'http://localhost:8050/render.html?url=https://www.yelp.com/search?find_desc=restaurant&find_loc=New+York,+NY,+United+States&start=0', 'status': 200, 'method': 'GET', 'timestamp': 1526083967.511238, 'response_url': 'http://localhost:8050/render.html?url=https://www.yelp.com/search?find_desc=restaurant&find_loc=New+York,+NY,+United+States&start=0'}

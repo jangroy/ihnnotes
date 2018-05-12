@@ -6,3 +6,23 @@ Traceback (most recent call last):
   File "/home/john/roy/scrapy/tester/tester/pipelines.py", line 60, in close_spider
     self.client.close()
 AttributeError: 'NoneType' object has no attribute 'close'
+2018-05-11 17:12:20 [root] WARNING: Opening spider...
+2018-05-11 17:12:20 [twisted] CRITICAL: Unhandled error in Deferred:
+2018-05-11 17:12:20 [twisted] CRITICAL: 
+Traceback (most recent call last):
+  File "/home/john/.local/lib/python2.7/site-packages/twisted/internet/defer.py", line 653, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/home/john/roy/scrapy/tester/tester/pipelines.py", line 39, in open_spider
+    print("items limit:", spider.items_limit)
+AttributeError: 'DefaultSpider' object has no attribute 'items_limit'
+2018-05-11 17:12:47 [scrapy.utils.signal] ERROR: Error caught on signal handler: <bound method ?._response_downloaded of <scrapy.extensions.throttle.AutoThrottle object at 0x7f921c6be450>>
+Traceback (most recent call last):
+  File "/home/john/.local/lib/python2.7/site-packages/scrapy/utils/signal.py", line 30, in send_catch_log
+    *arguments, **named)
+  File "/home/john/.local/lib/python2.7/site-packages/pydispatch/robustapply.py", line 55, in robustApply
+    return receiver(*arguments, **named)
+  File "/home/john/.local/lib/python2.7/site-packages/scrapy/extensions/throttle.py", line 47, in _response_downloaded
+    self._adjust_delay(slot, latency, response)
+  File "/home/john/.local/lib/python2.7/site-packages/scrapy/extensions/throttle.py", line 84, in _adjust_delay
+    new_delay = min(max(self.mindelay, new_delay), self.maxdelay)
+AttributeError: 'AutoThrottle' object has no attribute 'mindelay'

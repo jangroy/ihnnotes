@@ -16,7 +16,7 @@ def items_selector(s, r):
 
 
 def item_url_selector(s, i):
-    i.css('a.url::attr(href)')
+    i.css('a::attr(href)')
 
 
 def next_page_url_fn_selector(s, r):
@@ -31,18 +31,15 @@ class Yelp(IndexItemSpider):
     ajax = True
 
     items_selector = items_selector
-    item_url_selector = 'a.url::attr(href)'
+    item_url_selector = 'a::attr(href)'
 
-    index_attrs = {'transmission': '.last dd:nth-child(6)',
-                   'image_urls': '.photo::attr(src)'}
-    item_attrs = {'name': '.ddc-page-title'}
+    index_attrs = { 'image_urls': '.photo::attr(src)' }
+    item_attrs = {  'bizName': '.indexed-biz-name',
+                    'bizYelpUrl': '.indexed-biz-name a::attr(href)' }
 
     next_page_url_selector = next_page_url_fn_selector
-    
-    print("next_page_url_selector" + str(next_page_url_selector))
-    print("item_url_selector" + str(item_url_selector))
 
     loader = CustomLoader
 
-    items_per_page_limit = 4
-    pages_limit = 1
+    items_per_page_limit = 400
+    pages_limit = 100
